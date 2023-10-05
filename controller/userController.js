@@ -51,7 +51,7 @@ module.exports.resetPassword = async (req, res) => {
         Math.random().toString(36).substring(2, 15) +
         Math.random().toString(36).substring(2, 15);
 
-    const link = `https://localhost:5173/passwordreset/${randomString}`;
+    const link = `https://651efb30dfee970b87b96535--poetic-treacle-0d3e14.netlify.app/passwordreset/${randomString}`;
 
     user.resettoken = randomString;
     const updated = await UserModel.findByIdAndUpdate(user._id, user);
